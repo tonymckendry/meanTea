@@ -1,0 +1,15 @@
+<div ng-controller="mainController">
+  <div ng-repeat="tea in teas">
+    <h3>{{tea.name}}</h3>
+    <p>Price: {{tea.price / 100 | currency}}</p>
+    <p>Ingredients: {{tea.ingredients}}</p>
+    <p>Rating: {{tea.rating}}</p>
+    <p>In Stock?: {{tea.inStock}}</p>
+    <p>Categories:
+      <br>
+      <ul>
+        <li ng-repeat="category in tea.categories">{{category}}</li>
+      </ul>
+    </p>
+  </div>
+</div>
